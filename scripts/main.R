@@ -129,7 +129,6 @@ re_fresh <- function(all = TRUE, file = NULL, force = FALSE) {
   }
 }
 
-
 eval_log <- function() {
   # Directories and log file path
   target_dir <- "~/Documents/segMINT/offload_dir/outputs"
