@@ -1,12 +1,21 @@
 Package: segMINT
-Title: What the Package Does (One Line, Title Case)
-Version: 0.0.0.9000
+Type: Package
+Title: Process MINT Simulation Results and Create DuckDB Databases
+Version: 0.1.0
 Authors@R: 
-    person("First", "Last", , "first.last@example.com", role = c("aut", "cre"),
-           comment = c(ORCID = "YOUR-ORCID-ID"))
-Description: What the package does (one paragraph).
-License: `use_mit_license()`, `use_gpl3_license()` or friends to pick a
-    license
+    person("Cosmo", "Santoni", , "cosmo.santoni@imperial.ac.uk", role = c("aut", "cre"))
+Description: Provides tools to process MINT simulation results stored in RDS files,
+    flatten nested parameters, and create DuckDB databases for efficient querying.
+    Includes functions to handle batch processing of simulation files and manage
+    problematic simulations.
+License: MIT + file LICENSE
 Encoding: UTF-8
-Roxygen: list(markdown = TRUE)
+LazyData: true
+Imports:
+    DBI,
+    duckdb,
+    utils
+Suggests:
+    testthat (>= 3.0.0)
+Config/testthat/edition: 3
 RoxygenNote: 7.3.2
