@@ -11,8 +11,7 @@ create_database(
   data = NULL,
   data_dir = NULL,
   N = NULL,
-  randomize = FALSE,
-  demo = TRUE
+  randomize = FALSE
 )
 }
 \arguments{
@@ -30,8 +29,6 @@ If NULL, you must provide data_dir and N parameters}
 \item{N}{Either "all" or an integer. Number of files to process (required if data is NULL)}
 
 \item{randomize}{Logical. Whether to randomize file processing order (default: FALSE)}
-
-\item{demo}{Logical. Whether to run demo queries after creating database (default: TRUE)}
 }
 \value{
 Invisibly returns TRUE on success

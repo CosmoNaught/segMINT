@@ -65,7 +65,6 @@ get_results <- function(dir, N = "all") {
 #' @param data_dir Character string. Directory containing RDS files (required if data is NULL)
 #' @param N Either "all" or an integer. Number of files to process (required if data is NULL)
 #' @param randomize Logical. Whether to randomize file processing order (default: FALSE)
-#' @param demo Logical. Whether to run demo queries after creating database (default: TRUE)
 #'
 #' @return Invisibly returns TRUE on success
 #' @export
@@ -82,7 +81,7 @@ get_results <- function(dir, N = "all") {
 #' }
 create_database <- function(dir, file_name, table_name, 
                           data = NULL, data_dir = NULL, N = NULL,
-                          randomize = FALSE, demo = TRUE) {
+                          randomize = FALSE) {
   
   # Validate inputs
   if (!dir.exists(dir)) {
@@ -124,10 +123,6 @@ create_database <- function(dir, file_name, table_name,
     DBI::dbWriteTable(con, table_name, data, overwrite = TRUE)
     message(sprintf("Wrote %d rows to table '%s' in database '%s'", 
                     nrow(data), table_name, db_path))
-  }
-  
-  if (demo) {
-    demo_queries(db_path, table_name)
   }
   
   invisible(TRUE)
