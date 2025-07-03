@@ -11,7 +11,7 @@ The goal of segMINT is to ...
 You can install the development version of segMINT like so:
 
 ``` r
-# FILL THIS IN! HOW CAN PEOPLE INSTALL YOUR DEV PACKAGE?
+# TODO INSTRUCTIONS!
 ```
 
 ## Example
